@@ -5,11 +5,11 @@ dotenv.config();
 const connection = knex({
     client:"mysql2",
     connection:{
-        host : "localhost",
-        port : 3306,
-        user : "root",
-        password : "993366pe",
-        database : "cinema"
+        host : process.env.db_host,
+        port : process.env.db_port,
+        user : process.env.db_user,
+        password : process.env.db_password,
+        database : process.env.db_name
     }
 
 });
